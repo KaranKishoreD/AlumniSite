@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Alumni Portal</title>
+    <link rel="icon" href="../public/images/falcon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2 class="heading">IIITDM Alumni Portal</h2>
+        <nav class="nav">
+            <a href="/index-login">Home</a>
+            <a href="/about-login">About Us</a>
+            <a href="/members-login">Members</a>
+            <a href="/events-login">Events</a>
+            <a href="/gallery-login">Gallery</a>
+            <a button class="btnlogin" href="/auth/logout">Logout</a>
+        </nav>
+    </header>
+    
+    <div class="container-outer">
+        <p>This is IIITDM Kancheepuram's Alumni Website</p>
+        <div class="container-mask"></div>
+    </div>
+    <section id="log">
+        <div class="tiny-stats">
+            <div class="innerbox">
+                <div class="top-img">
+                    <img class = "in-img" src="../public/images/logo.png">
+                </div>
+                <div class="stats-1">
+                    Since 2007
+                </div>
+                <div class="description">
+                    IIITDM Kancheepuram 
+                </div>
+            </div>    
+            <div class="outer">
+                <span class="X"><ion-icon name="close-circle-sharp"></ion-icon></span>
+                <div class="form-box login">
+                    <h2>Login</h2>
+                    <form action="#">
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed-sharp"></ion-icon></span>
+                            <input type="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember">
+                            <label><input type="checkbox">Remember me</label>
+                            <a href="#">Forgot Password?img</a>
+                        </div>
+                        <button type="submit" class="btn">Login</button>
+                        <div class="login-register">
+                            <p>Don't have an account? <a href="#log" class="register-link">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+        
+                <div class="form-box register">
+                    <h2>Registration</h2>
+                    <form action="/auth/register" method="POST">
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="person-circle-sharp"></ion-icon></span>
+                            <input type="text" name="username" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <input type="email" name="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="lock-closed-sharp"></ion-icon></span>
+                            <input type="password" name="password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="remember">
+                            <label><input type="checkbox">I agree to the terms & conditions</label>
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                        <div class="login-register">
+                            <p>Already have an account? <a href="#log" class="login-link">Login</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>  
+            <div class="innerbox">
+                <div class="top-img">
+                    <img class = "in-img" src="../public/images/alumni-logo.png">
+                </div>
+                <div class="stats-1">
+                    Since 2017
+                </div>
+                <div class="description">
+                    Office of Alumni affairs 
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container-3">
+        <div class="footer-bg">
+            <div class="quick-links">
+                    <p class="footer-heading">Quick Links</p>
+                    <hr class="h-line">
+                    <div class="footer-space"></div>
+                    <a class = "link" href="/index-login"><span class="footer-links">Home</span></a>
+                    <a class = "link" href="/about-login"><span class="footer-links">About Us</span></a>
+                    <a class = "link" href="/members-login"><span class="footer-links">Members</span></a>
+                    <a class = "link" href="/events-login"><span class="footer-links">Events</span></a>
+                    <a class = "link" href="/gallery-login"><span class="footer-links">Gallery</span></a>
+            </div>
+            <div class="contact-us">
+                <div class="footer-heading">Contact us</div>
+                <hr class="h-line">
+                <div class="icons">
+                    <a href="https://www.linkedin.com/company/alumni-affairs-iiitdm/" target="_blank"><img class = "footer-icon-1" src="../public/images/linkedin.webp"></a>
+                    <a href="https://instagram.com/alumniaffairsiiitdm?igshid=YmMyMTA2M2Y=" target="_blank"><img class = "footer-icon-2" src = "../public/images/instagram.png"></a>
+                    <a href="https://twitter.com/iiitdm_kancheep?lang=en" target="_blank"><img class = "footer-icon-3" src="../public/images/twitter.webp"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{#if message}}
+        <h4 class="alert alert-mt4">message</h4>
+    {{/if}}
+    <script src="./js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+    {{!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> --}}
+</body>

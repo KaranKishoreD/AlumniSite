@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="../public/css/gallery.css">
+    <link rel="icon" href="../public/images/falcon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2 class="logo">IIITDM Alumni Portal</h2>
+        <nav class="nav">
+            <a href="/index-login">Home</a>
+            <a href="/about-login">About Us</a>
+            <a href="/members-login">Members</a>
+            <a href="/events-login">Events</a>
+            <a href="/gallery-login">Gallery</a>
+            <a button class="btnlogin" href="/auth/logout">Logout</a>
+        </nav>
+    </header>
+    <div class="slideshow-container">
+        <!-- Full-width images -->
+        <div class="mySlides fade">
+          <img src="../public/images/slider-1.png" style="width:100%">          
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="../public/images/slider-2.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides fade">
+          <img src="../public/images/slider-3.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides fade">
+            <img src="../public/images/slider-4.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides fade">
+            <img src="../public/images/slider-5.png" style="width:100%">
+          </div>    
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    <div class="container-3">
+        <div class="footer-bg">
+            <div class="quick-links">
+                    <p class="footer-heading">Quick Links</p>
+                    <hr class="h-line">
+                    <div class="footer-space"></div>
+                    <a class = "link" href="/index-login"><span class="footer-links">Home</span></a>
+                    <a class = "link" href="/about-login"><span class="footer-links">About Us</span></a>
+                    <a class = "link" href="/members-login"><span class="footer-links">Members</span></a>
+                    <a class = "link" href="/events-login"><span class="footer-links">Events</span></a>
+                    <a class = "link" href="/gallery-login"><span class="footer-links">Gallery</span></a>
+            </div>
+            <div class="contact-us">
+                <div class="footer-heading">Contact us</div>
+                <hr class="h-line">
+                <div class="icons">
+                    <a href="https://www.linkedin.com/company/alumni-affairs-iiitdm/" target="_blank"><img class = "footer-icon-1" src="../public/images/linkedin.webp"></a>
+                    <a href="https://instagram.com/alumniaffairsiiitdm?igshid=YmMyMTA2M2Y=" target="_blank"><img class = "footer-icon-2" src = "../public/images/instagram.png"></a>
+                    <a href="https://twitter.com/iiitdm_kancheep?lang=en" target="_blank"><img class = "footer-icon-3" src="../public/images/twitter.webp"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{#if message}}
+        <h4 class="alert alert-danger mt-4">{{message}}</h4>
+    {{/if}}
+    <script src="../public/js/gallery.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
